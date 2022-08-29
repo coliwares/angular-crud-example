@@ -26,10 +26,11 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('angular-crud-example');
   });
 
-  it('should render title', () => {
+  it('should render navBar', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-crud-example app is running!');
+    console.log('LOOOOOOOGGGGGGGG  ---> ' + compiled.querySelector('div a')?.textContent)
+    expect(compiled.querySelector('div a')?.textContent).toContain('Kaizen');
   });
 });
